@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python monitor_canary.py
+python /monitor_canary.py
