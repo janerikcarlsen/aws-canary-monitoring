@@ -25,4 +25,3 @@ while time.time() < timeout:
         print("Canary Alarm in ALARM state")
         print("Aborting with exit code 1")
         exit(1)
-        
