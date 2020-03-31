@@ -16,7 +16,7 @@ timeout = now + MONITORING_TIME*60000
 while time.time() < timeout:
     alarms = client.describe_alarms(
         AlarmNames=[ALARM_NAME],
-        AlarmTypes=["CompositeAlarm"|"MetricAlarm"],
+        AlarmTypes=["CompositeAlarm", "MetricAlarm"],
         StateValue="ALARM"
     )
     if not alarms: 
