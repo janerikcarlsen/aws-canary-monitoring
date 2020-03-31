@@ -1,0 +1,19 @@
+name: "AWS Cloudwatch Canary Monitor"
+description: "Monitors AWS CloudWatch Canary Synthetics and exits with an exit code 1 if the Cloudwatch Alarm enters an ALARM state"
+branding: 
+  icon: "feather"
+  color: "yellow"
+inputs:
+  alarm-name: 
+    description: "Name or ARN of the Cloudwatch alarm to monitor"
+    required: true
+  monitoring-time:
+    description: "Time in minutes to monitor the Cloudwatch alarm. Defaults to 5 minutes"
+    default: 5
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args: 
+    - ${{ inputs.alarm-name }}
+    - ${{ inputs.monitoring-time }}
