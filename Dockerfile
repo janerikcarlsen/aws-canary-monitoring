@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 COPY entrypoint.py /entrypoint.py
 RUN chmod +x /entrypoint.py
 
-ENTRYPOINT ["/entrypoint.py"]
+ENTRYPOINT ["python", "/entrypoint.py"]
