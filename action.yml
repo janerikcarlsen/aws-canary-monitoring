@@ -11,9 +11,14 @@ inputs:
     description: "Time in minutes to monitor the Cloudwatch alarm. Defaults to 5 minutes"
     default: 5
     required: false
+  polling-interval:
+    description: "Time in seconds for polling interval. Defaults to 10 seconds"
+    default: 10
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
   args: 
     - ${{ inputs.alarm-name }}
     - ${{ inputs.monitoring-time }}
+    - ${{ inputs.polling-interval }}
