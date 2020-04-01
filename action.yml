@@ -1,5 +1,6 @@
 name: "AWS Cloudwatch Canary Monitor"
 description: "Monitors AWS CloudWatch Canary Synthetics and exits with an exit code 1 if the Cloudwatch Alarm enters an ALARM state"
+author: Jan-Erik Carlsen
 branding: 
   icon: "feather"
   color: "yellow"
